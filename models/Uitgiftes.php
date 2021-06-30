@@ -49,8 +49,8 @@ class Uitgiftes extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'medewerkerID' => 'Medewerker ID',
-            'onderdeelID' => 'Onderdeel ID',
+            'medewerkerID' => 'Medewerker',
+            'onderdeelID' => 'Onderdeel',
             'tijdstip' => 'Tijdstip',
             'gewichtKg' => 'Gewicht Kg',
             'prijs' => 'Prijs',

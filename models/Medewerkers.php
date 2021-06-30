@@ -47,7 +47,7 @@ class Medewerkers extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'rolID' => 'Rol ID',
+            'rolID' => 'Role',
             'naam' => 'Naam',
             'wachtwoord' => 'Wachtwoord',
             'emailaddres' => 'Emailaddres',

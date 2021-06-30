@@ -45,8 +45,8 @@ class Onderdeelapparaat extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'apparaatID' => 'Apparaat ID',
-            'onderdeelID' => 'Onderdeel ID',
+            'apparaatID' => 'Apparaat',
+            'onderdeelID' => 'Onderdeel',
             'percentage' => 'Percentage',
         ];
     }
