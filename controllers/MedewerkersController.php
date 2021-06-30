@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\medewerkers;
 use app\models\medewerkersSearch;
+use app\models\Rollen;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -65,6 +66,7 @@ class MedewerkersController extends Controller
     public function actionCreate()
     {
         $model = new medewerkers();
+        $rollen= Rollen::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,6 +74,7 @@ class MedewerkersController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'rollen' => $rollen
         ]);
     }
 

@@ -9,14 +9,14 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 
 $onderdeel = ArrayHelper::map($onderdelen, 'id', 'naam');
-
+$medewerker = ArrayHelper::map($medewerkers, 'id', 'naam');
 ?>
 
 <div class="uitgiftes-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'medewerkerID')->textInput() ?>
+    <?= $form->field($model, 'medewerkerID')->dropDownList($medewerker) ?>
 
     <?= $form->field($model, 'onderdeelID')->dropDownList($onderdeel) ?>
 

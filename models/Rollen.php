@@ -57,6 +57,6 @@ class Rollen extends \yii\db\ActiveRecord
      */
     public function getMedewerkers()
     {
-        return $this->hasOne(Medewerkers::className(), ['rolID' => 'id']);
+        return $this->hasMany(Medewerkers::className(), ['rolID' => 'id']);
     }
 }

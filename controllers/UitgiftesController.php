@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Medewerkers;
 use app\models\Onderdelen;
 use Yii;
 use app\models\uitgiftes;
@@ -67,6 +68,7 @@ class UitgiftesController extends Controller
     {
         $model = new uitgiftes();
         $onderdelen = Onderdelen::find()->all();
+        $medewerkers = Medewerkers::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -74,7 +76,8 @@ class UitgiftesController extends Controller
 
         return $this->render('create', [
             'model' => $model,
-            'onderdelen' => $onderdelen
+            'onderdelen' => $onderdelen,
+            'medewerkers' => $medewerkers
         ]);
     }
 

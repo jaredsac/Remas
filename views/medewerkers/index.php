@@ -27,7 +27,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'rolID',
+            [
+                'attribute' => 'rolID',
+                'label'     => 'Role',
+                'value'     => 'rol.naam'
+                // hier verander ik  ik de naaam van rolID naar role
+                //vranderd de naam van de rollen inplaats van een nummer staat er een naam
+            ],
             'naam',
             'wachtwoord',
             'emailaddres:email',
