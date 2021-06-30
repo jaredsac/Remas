@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Onderdelen;
 use Yii;
 use app\models\uitgiftes;
 use app\models\uitgiftesSearch;
@@ -65,6 +66,7 @@ class UitgiftesController extends Controller
     public function actionCreate()
     {
         $model = new uitgiftes();
+        $onderdelen = Onderdelen::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,6 +74,7 @@ class UitgiftesController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'onderdelen' => $onderdelen
         ]);
     }
 
