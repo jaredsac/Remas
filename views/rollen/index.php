@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\rollenSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Rollens';
+$this->title = 'Rollen';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="rollen-index">
