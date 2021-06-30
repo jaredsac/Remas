@@ -2,9 +2,11 @@
 
 namespace app\controllers;
 
+use app\models\Apparaten;
 use Yii;
 use app\models\onderdeelapparaat;
 use app\models\onderdeelapparatenSearch;
+use app\models\Onderdelen;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -65,6 +67,9 @@ class OnderdeelapparaatController extends Controller
     public function actionCreate()
     {
         $model = new onderdeelapparaat();
+        $onderdelen = Onderdelen::find()->all();
+        $apparaten = Apparaten::find()->all();
+
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,6 +77,8 @@ class OnderdeelapparaatController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'onderdelen' => $onderdelen,
+            'apparaten' => $apparaten
         ]);
     }
 
