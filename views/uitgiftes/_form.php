@@ -18,7 +18,7 @@ $onderdeel = ArrayHelper::map($onderdelen, 'id', 'naam');
 
     <?= $form->field($model, 'medewerkerID')->textInput() ?>
 
-    <?= $form->field($model, 'onderdeelID')->dropDownList($onderdelen) ?>
+    <?= $form->field($model, 'onderdeelID')->dropDownList($onderdeel) ?>
 
     <?= $form->field($model, 'tijdstip')->textInput() ?>
 
