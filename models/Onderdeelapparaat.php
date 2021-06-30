@@ -71,3 +71,5 @@ class Onderdeelapparaat extends \yii\db\ActiveRecord
         return $this->hasOne(Onderdelen::className(), ['id' => 'onderdeelID']);
     }
 }
+// hier moest een hasmany staan maar het werkte niet goed bij mij dus heb ik het 
+//heb ik het maar hasOne gedaan twee keer.
