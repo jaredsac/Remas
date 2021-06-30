@@ -18,7 +18,7 @@ $apparaat = ArrayHelper::map($apparaten, 'id', 'naam');
 
     <?= $form->field($model, 'apparaatID')->dropDownList($apparaat) ?>
 
-    <?= $form->field($model, 'onderdeelID')->dropDownList($onderdelen) ?>
+    <?= $form->field($model, 'onderdeelID')->dropDownList($onderdeel) ?>
 
     <?= $form->field($model, 'percentage')->textInput() ?>
 
