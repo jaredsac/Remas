@@ -91,6 +91,8 @@ class UitgiftesController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $onderdelen = Onderdelen::find()->all();
+        $medewerkers = Medewerkers::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -98,6 +100,8 @@ class UitgiftesController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'onderdelen' => $onderdelen,
+            'medewerkers' => $medewerkers
         ]);
     }
 

@@ -88,6 +88,7 @@ class MedewerkersController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $rollen= Rollen::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -95,6 +96,7 @@ class MedewerkersController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'rollen' => $rollen
         ]);
     }
 
