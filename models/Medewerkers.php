@@ -11,7 +11,7 @@ use Yii;
  * @property int $rolID
  * @property string $naam
  * @property string $wachtwoord
- * @property int $emailaddres
+ * @property string $emailaddres
  *
  * @property Innames[] $innames
  * @property Rollen $rol
@@ -34,8 +34,9 @@ class Medewerkers extends \yii\db\ActiveRecord
     {
         return [
             [['rolID', 'naam', 'wachtwoord', 'emailaddres'], 'required'],
-            [['rolID', 'emailaddres'], 'integer'],
+            [['rolID'], 'integer'],
             [['naam', 'wachtwoord'], 'string', 'max' => 40],
+            [['emailaddres'], 'string', 'max' => 200],
             [['rolID'], 'exist', 'skipOnError' => true, 'targetClass' => Rollen::className(), 'targetAttribute' => ['rolID' => 'id']],
         ];
     }

@@ -45,6 +45,7 @@ AppAsset::register($this);
                 ['label' => 'Apparaat', 'url' => ['/apparaten/index']],
                 ['label' => 'Medewerkers', 'url' => ['/medewerkers/index']],
                 ['label' => 'Uitgifte', 'url' => ['/uitgiftes/index']],
+                ['label' => 'Role', 'url' => ['/rollen/index']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(
