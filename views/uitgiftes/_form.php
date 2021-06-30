@@ -27,7 +27,7 @@ $onderdeel = ArrayHelper::map($onderdelen, 'id', 'naam');
     <?= $form->field($model, 'prijs')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-info']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
