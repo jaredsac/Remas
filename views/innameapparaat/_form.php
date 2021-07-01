@@ -26,7 +26,7 @@ $inname = ArrayHelper::map($innames, 'id', 'medewerkerID');
     <?= $form->field($model, 'ontleed')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-info']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

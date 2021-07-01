@@ -27,7 +27,7 @@ $rolelist = ArrayHelper::map($rollen, 'id', 'naam');
     <?= $form->field($model, 'emailaddres')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-info']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
