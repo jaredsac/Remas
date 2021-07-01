@@ -9,7 +9,7 @@ use app\models\innameapparaat;
 /**
  * innameappraatSearch represents the model behind the search form of `app\models\innameapparaat`.
  */
-class innameappraatSearch extends innameapparaat
+class innameapparaatSearch extends innameapparaat
 {
     /**
      * {@inheritdoc}

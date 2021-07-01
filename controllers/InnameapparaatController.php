@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\innameapparaat;
-use app\models\innameappraatSearch;
+use app\models\innameapparaatSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * InnameappraatController implements the CRUD actions for innameapparaat model.
  */
-class InnameappraatController extends Controller
+class InnameapparaatController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -35,7 +35,7 @@ class InnameappraatController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new innameappraatSearch();
+        $searchModel = new innameapparaatSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
