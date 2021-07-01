@@ -6,6 +6,7 @@ use Yii;
 use app\models\innames;
 use app\models\innamesSearch;
 use app\models\Medewerkers;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -25,6 +26,22 @@ class InnamesController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                ],
+            ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+
+                    // when logged in as admin
+                    [
+                        'actions' => ['create', 'update', 'delete', 'index','view'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            return (Yii::$app->user->identity->role == 'inname');
+                        }
+                    ],
+
                 ],
             ],
         ];
