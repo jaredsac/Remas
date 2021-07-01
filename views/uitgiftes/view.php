@@ -33,14 +33,15 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'medewerkerID',
                 'label'     => 'Medewerker',
-                'value'     => 'medewerker.naam'
+                
                 // hier verander ik  ik de naaam van medewerkerID naar medewerker
                 //vranderd de naam van de medewerker inplaats van een nummer staat er een naam
+                // valua value werk niet 
             ],
             [
                 'attribute' => 'onderdeelID',
                 'label'     => 'Onderdeel',
-                'value'     => 'onderdeel.naam'
+                // valua value werk niet
                 // hier verander ik  ik de naaam van onderdeelID naar onderdeel
                 //vranderd de naam van de onderdeel inplaats van een nummer staat er een naam
             ],

@@ -7,6 +7,7 @@ use app\models\Onderdelen;
 use Yii;
 use app\models\uitgiftes;
 use app\models\uitgiftesSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -26,6 +27,22 @@ class UitgiftesController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                ],
+            ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+
+                    // when logged in as admin
+                    [
+                        'actions' => ['create', 'update', 'delete', 'index','view'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            return (Yii::$app->user->identity->role == 'uitgifte');
+                        }
+                    ],
+
                 ],
             ],
         ];
