@@ -2,6 +2,8 @@
 
 namespace app\models;
 
+use yii\rbac\Role;
+
 class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
 {
     public $id;
@@ -9,21 +11,56 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     public $password;
     public $authKey;
     public $accessToken;
+    public $role;
 
     private static $users = [
         '100' => [
             'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
+            'username' => 'karel',
+            'password' => 'kistk',
+            'authKey' => 'karel-key',
+            'accessToken' => 'karel-token',
+            'role' => 'admin',
         ],
         '101' => [
             'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
+            'username' => 'katleen',
+            'password' => 'kath',
+            'authKey' => 'katleen-key',
+            'accessToken' => 'katleen-token',
+            'role' => 'medewerker',
+        ],
+        '102' => [
+            'id' => '102',
+            'username' => 'johan',
+            'password' => 'jpop',
+            'authKey' => 'johan-key',
+            'accessToken' => 'johan-token',
+            'role' => 'inname',
+        ],
+        '103' => [
+            'id' => '103',
+            'username' => 'dirk',
+            'password' => 'dirkhaan',
+            'authKey' => 'dirk-key',
+            'accessToken' => 'dirk-token',
+            'role' => 'uitgifte',
+        ],
+        '104' => [
+            'id' => '104',
+            'username' => 'margeet',
+            'password' => 'huisbouw',
+            'authKey' => 'margeet-key',
+            'accessToken' => 'margeet-token',
+            'role' => 'verwerking',
+        ],
+        '105' => [
+            'id' => '105',
+            'username' => 'james',
+            'password' => 'puurman',
+            'authKey' => 'james-key',
+            'accessToken' => 'james-token',
+            'role' => 'applicatieBeheerder',
         ],
     ];
 
