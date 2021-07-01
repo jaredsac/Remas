@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
+ 
             'id',
             [
                 'attribute' => 'apparaatID',
@@ -34,13 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 // hier verander ik  ik de naaam van apparaatID naar Appraat
                 //vranderd de naam van de apparaat inplaats van een nummer staat er een naam
             ],
-            [
-                'attribute' => 'innameID',
-                'label'     => 'Inname',
-                'value'     => 'medewerker.naam'
-                // hier verander ik  ik de naaam van apparaatID naar Appraat
-                //vranderd de naam van de apparaat inplaats van een nummer staat er een naam
-            ],
+            'innameID',
+            //heeft mij niet gelukt op het te veranderen
             'ontleed',
 
             ['class' => 'yii\grid\ActionColumn'],

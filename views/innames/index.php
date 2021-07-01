@@ -18,7 +18,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Innames', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -35,7 +36,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 //vranderd de naam van de medewerker inplaats van een nummer staat er een naam
             ],
             'tijdstip',
-
+            'apparaatID',
+            //heeft mij niet gelukt om dit goed te tonen
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
