@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\models\onderdeelapparaat */
 
 $this->title = 'Create Onderdeelapparaat';
-$this->params['breadcrumbs'][] = ['label' => 'Onderdeelapparaats', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Onderdeelapparaat', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="onderdeelapparaat-create">
