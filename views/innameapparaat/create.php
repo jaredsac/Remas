@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\models\innameapparaat */
 
 $this->title = 'Create Innameapparaat';
-$this->params['breadcrumbs'][] = ['label' => 'Innameapparaats', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Innameapparaat', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="innameapparaat-create">
@@ -15,6 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
+        'apparaten' => $apparaten,
+        'innames' => $innames
     ]) ?>
 
 </div>

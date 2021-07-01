@@ -27,8 +27,20 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'apparaatID',
-            'innameID',
+            [
+                'attribute' => 'apparaatID',
+                'label'     => 'Apparaat',
+                'value'     => 'apparaat.naam'
+                // hier verander ik  ik de naaam van apparaatID naar Appraat
+                //vranderd de naam van de apparaat inplaats van een nummer staat er een naam
+            ],
+            [
+                'attribute' => 'innameID',
+                'label'     => 'Inname',
+                'value'     => 'medewerker.naam'
+                // hier verander ik  ik de naaam van apparaatID naar Appraat
+                //vranderd de naam van de apparaat inplaats van een nummer staat er een naam
+            ],
             'ontleed',
 
             ['class' => 'yii\grid\ActionColumn'],

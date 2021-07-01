@@ -2,9 +2,11 @@
 
 namespace app\controllers;
 
+use app\models\Apparaten;
 use Yii;
 use app\models\innameapparaat;
 use app\models\innameapparaatSearch;
+use app\models\Innames;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -90,6 +92,8 @@ class InnameapparaatController extends Controller
     public function actionCreate()
     {
         $model = new innameapparaat();
+        $apparaten = Apparaten::find()->all();
+        $innames = Innames::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -97,6 +101,8 @@ class InnameapparaatController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'apparaten' => $apparaten,
+            'innames' => $innames
         ]);
     }
 
@@ -110,6 +116,8 @@ class InnameapparaatController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $apparaten = Apparaten::find()->all();
+        $innames = Innames::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -117,6 +125,8 @@ class InnameapparaatController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'apparaten' => $apparaten,
+            'innames' => $innames
         ]);
     }
 
