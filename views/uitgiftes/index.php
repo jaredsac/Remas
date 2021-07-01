@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             [
                 'attribute' => 'medewerkerID',
                 'label'     => 'Medewerker',
@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             'tijdstip',
             'gewichtKg',
-            //'prijs',
+            'prijs',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
