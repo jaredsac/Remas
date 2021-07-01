@@ -46,6 +46,12 @@ AppAsset::register($this);
                 ['label' => 'Medewerkers', 'url' => ['/medewerkers/index']],
                 ['label' => 'Uitgifte', 'url' => ['/uitgiftes/index']],
                 ['label' => 'Role', 'url' => ['/rollen/index']],
+                [ 'label' => 'Innames',
+                    'items' => [
+                        ['label' => 'Innames', 'url' => ['/innames/index'] ],
+                    [   'label' => 'Innameapparaat', 'url' => ['/innameapparaat/index'] ],
+                    ],
+                ],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(
