@@ -63,6 +63,7 @@ class Medewerkers extends \yii\db\ActiveRecord
     public function getInnames()
     {
         return $this->hasMany(Innames::className(), ['medewerkerID' => 'id']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 
     /**
@@ -73,6 +74,7 @@ class Medewerkers extends \yii\db\ActiveRecord
     public function getRol()
     {
         return $this->hasOne(Rollen::className(), ['id' => 'rolID']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 
     /**
@@ -83,5 +85,6 @@ class Medewerkers extends \yii\db\ActiveRecord
     public function getUitgiftes()
     {
         return $this->hasMany(Uitgiftes::className(), ['medewerkerID' => 'id']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 }

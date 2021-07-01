@@ -9,6 +9,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 
 $medewerker = ArrayHelper::map($medewerkers, 'id', 'naam');
+//dit gebruik ik om mijn dropdownlist te kunnen gebruiken
 
 ?>
 
@@ -16,7 +17,9 @@ $medewerker = ArrayHelper::map($medewerkers, 'id', 'naam');
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'medewerkerID')->dropDownList($medewerker) ?>
+    <?= $form->field($model, 'medewerkerID')->dropDownList($medewerker) 
+    //hier boven  staan de dropdownlist
+    ?>
 
     <?= $form->field($model, 'tijdstip')->textInput() ?>
 

@@ -57,6 +57,7 @@ class Innames extends \yii\db\ActiveRecord
     public function getInnameapparaats()
     {
         return $this->hasMany(Innameapparaat::className(), ['innameID' => 'id']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 
     /**
@@ -67,5 +68,6 @@ class Innames extends \yii\db\ActiveRecord
     public function getMedewerker()
     {
         return $this->hasOne(Medewerkers::className(), ['id' => 'medewerkerID']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 }

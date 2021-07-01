@@ -62,6 +62,7 @@ class Apparaten extends \yii\db\ActiveRecord
     public function getInnameapparaats()
     {
         return $this->hasMany(Innameapparaat::className(), ['apparaatID' => 'id']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 
     /**
@@ -72,5 +73,6 @@ class Apparaten extends \yii\db\ActiveRecord
     public function getOnderdeelapparaats()
     {
         return $this->hasMany(Onderdeelapparaat::className(), ['apparaatID' => 'id']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 }

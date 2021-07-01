@@ -38,6 +38,7 @@ AppAsset::register($this);
             ],
         ]);
         echo Nav::widget([
+            //hier heb je mijn menu gemaakt
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => [
                 ['label' => 'OnderdeelApparaat', 'url' => ['/onderdeelapparaat/index']],

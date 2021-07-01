@@ -95,6 +95,7 @@ class UitgiftesController extends Controller
         $model = new uitgiftes();
         $onderdelen = Onderdelen::find()->all();
         $medewerkers = Medewerkers::find()->all();
+        //hier word alle info uit de database gehaald
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -119,6 +120,7 @@ class UitgiftesController extends Controller
         $model = $this->findModel($id);
         $onderdelen = Onderdelen::find()->all();
         $medewerkers = Medewerkers::find()->all();
+        //hier word alle info uit de database gehaald
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -128,6 +130,7 @@ class UitgiftesController extends Controller
             'model' => $model,
             'onderdelen' => $onderdelen,
             'medewerkers' => $medewerkers
+            // hier word het uitgevoerd in het browser
         ]);
     }
 

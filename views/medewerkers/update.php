@@ -17,6 +17,7 @@ $this->params['breadcrumbs'][] = 'Update';
     <?= $this->render('_form', [
         'model' => $model,
         'rollen' => $rollen
+        // hier word het uitgevoerd in het browser
     ]) ?>
 
 </div>

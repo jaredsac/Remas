@@ -65,6 +65,7 @@ class Uitgiftes extends \yii\db\ActiveRecord
     public function getMedewerker()
     {
         return $this->hasOne(Medewerkers::className(), ['id' => 'medewerkerID']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 
     /**
@@ -75,5 +76,6 @@ class Uitgiftes extends \yii\db\ActiveRecord
     public function getOnderdeel()
     {
         return $this->hasOne(Onderdelen::className(), ['id' => 'onderdeelID']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 }

@@ -9,6 +9,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 
 $rolelist = ArrayHelper::map($rollen, 'id', 'naam');
+//dit gebruik ik om mijn dropdownlist te kunnen gebruiken
 
 ?>
 
@@ -16,7 +17,8 @@ $rolelist = ArrayHelper::map($rollen, 'id', 'naam');
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'rolID')->dropDownList($rolelist) ?>
+    <?= //hier onder staan de dropdownlist
+    $form->field($model, 'rolID')->dropDownList($rolelist) ?>
 
     <?= $form->field($model, 'naam')->textInput(['maxlength' => true]) ?>
 

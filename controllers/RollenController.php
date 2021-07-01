@@ -40,7 +40,7 @@ class RollenController extends Controller
                             return (Yii::$app->user->identity->role == 'admin');
                         }
                     ],
-
+                        //hier laat ik zien wie welke rechten heeft.
                 ],
             ],
         ];

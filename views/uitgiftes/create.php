@@ -17,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'onderdelen' => $onderdelen,
         'medewerkers' =>$medewerkers
+        // hier word het uitgevoerd in het browser
     ]) ?>
 
 </div>

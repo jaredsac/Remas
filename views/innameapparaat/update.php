@@ -18,6 +18,7 @@ $this->params['breadcrumbs'][] = 'Update';
         'model' => $model,
         'apparaten' => $apparaten,
         'innames' => $innames
+        // hier word het uitgevoerd in het browser
     ]) ?>
 
 </div>

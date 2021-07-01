@@ -94,6 +94,7 @@ class InnameapparaatController extends Controller
         $model = new innameapparaat();
         $apparaten = Apparaten::find()->all();
         $innames = Innames::find()->all();
+        //hier word alle info uit de database gehaald
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -103,6 +104,7 @@ class InnameapparaatController extends Controller
             'model' => $model,
             'apparaten' => $apparaten,
             'innames' => $innames
+            // hier word het uitgevoerd in het browser
         ]);
     }
 
@@ -118,6 +120,7 @@ class InnameapparaatController extends Controller
         $model = $this->findModel($id);
         $apparaten = Apparaten::find()->all();
         $innames = Innames::find()->all();
+        //hier word alle info uit de database gehaald
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -127,6 +130,7 @@ class InnameapparaatController extends Controller
             'model' => $model,
             'apparaten' => $apparaten,
             'innames' => $innames
+            // hier word het uitgevoerd in het browser
         ]);
     }
 

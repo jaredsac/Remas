@@ -94,6 +94,7 @@ class OnderdeelapparaatController extends Controller
         $model = new onderdeelapparaat();
         $onderdelen = Onderdelen::find()->all();
         $apparaten = Apparaten::find()->all();
+        //hier word alle info uit de database gehaald
 
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -104,6 +105,7 @@ class OnderdeelapparaatController extends Controller
             'model' => $model,
             'onderdelen' => $onderdelen,
             'apparaten' => $apparaten
+            // hier word het uitgevoerd in het browser
         ]);
     }
 
@@ -119,6 +121,7 @@ class OnderdeelapparaatController extends Controller
         $model = $this->findModel($id);
         $onderdelen = Onderdelen::find()->all();
         $apparaten = Apparaten::find()->all();
+        //hier word alle info uit de database gehaald
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -128,6 +131,7 @@ class OnderdeelapparaatController extends Controller
             'model' => $model,
             'onderdelen' => $onderdelen,
             'apparaten' => $apparaten
+            // hier word het uitgevoerd in het browser
         ]);
     }
 

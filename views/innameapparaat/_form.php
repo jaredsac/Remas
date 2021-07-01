@@ -10,13 +10,16 @@ use yii\widgets\ActiveForm;
 
 $apparaat = ArrayHelper::map($apparaten, 'id', 'naam');
 $inname = ArrayHelper::map($innames, 'id', 'medewerkerID');
+//dit gebruik ik om mijn dropdownlist te kunnen gebruiken
 ?>
 
 <div class="innameapparaat-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'apparaatID')->dropDownList($apparaat) ?>
+    <?= $form->field($model, 'apparaatID')->dropDownList($apparaat) 
+        //hier boven en onder staan de dropdownlist
+    ?>
 
     <?= $form->field($model, 'innameID')->dropDownList($inname) ?>
 

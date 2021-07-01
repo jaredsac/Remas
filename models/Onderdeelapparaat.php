@@ -59,6 +59,8 @@ class Onderdeelapparaat extends \yii\db\ActiveRecord
     public function getApparaat()
     {
         return $this->hasOne(Apparaten::className(), ['id' => 'apparaatID']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
+
     }
 
     /**
@@ -69,7 +71,6 @@ class Onderdeelapparaat extends \yii\db\ActiveRecord
     public function getOnderdeel()
     {
         return $this->hasOne(Onderdelen::className(), ['id' => 'onderdeelID']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 }
-// hier moest een hasmany staan maar het werkte niet goed bij mij dus heb ik het 
-//heb ik het maar hasOne gedaan twee keer.

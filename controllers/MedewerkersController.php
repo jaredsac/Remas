@@ -41,7 +41,7 @@ class MedewerkersController extends Controller
                             return (Yii::$app->user->identity->role == 'admin');
                         }
                     ],
-
+                     //hier laat ik zien wie welke rechten heeft.
                 ],
             ],
         ];
@@ -84,6 +84,7 @@ class MedewerkersController extends Controller
     {
         $model = new medewerkers();
         $rollen= Rollen::find()->all();
+        //hier word alle info uit de database gehaald
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -92,6 +93,7 @@ class MedewerkersController extends Controller
         return $this->render('create', [
             'model' => $model,
             'rollen' => $rollen
+            // hier word het uitgevoerd in het browser
         ]);
     }
 
@@ -106,6 +108,7 @@ class MedewerkersController extends Controller
     {
         $model = $this->findModel($id);
         $rollen= Rollen::find()->all();
+        //hier word alle info uit de database gehaald.
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -114,6 +117,7 @@ class MedewerkersController extends Controller
         return $this->render('update', [
             'model' => $model,
             'rollen' => $rollen
+            // hier word het uitgevoerd in het browser
         ]);
     }
 

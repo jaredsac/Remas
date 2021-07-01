@@ -58,5 +58,6 @@ class Rollen extends \yii\db\ActiveRecord
     public function getMedewerkers()
     {
         return $this->hasMany(Medewerkers::className(), ['rolID' => 'id']);
+        //hier zijn de joins die ik in de database hebt gemmaakt.
     }
 }
