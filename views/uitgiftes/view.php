@@ -30,8 +30,20 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'medewerkerID',
-            'onderdeelID',
+            [
+                'attribute' => 'medewerkerID',
+                'label'     => 'Medewerker',
+                'value'     => 'medewerker.naam'
+                // hier verander ik  ik de naaam van medewerkerID naar medewerker
+                //vranderd de naam van de medewerker inplaats van een nummer staat er een naam
+            ],
+            [
+                'attribute' => 'onderdeelID',
+                'label'     => 'Onderdeel',
+                'value'     => 'onderdeel.naam'
+                // hier verander ik  ik de naaam van onderdeelID naar onderdeel
+                //vranderd de naam van de onderdeel inplaats van een nummer staat er een naam
+            ],
             'tijdstip',
             'gewichtKg',
             'prijs',
