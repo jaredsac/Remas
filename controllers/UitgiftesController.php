@@ -35,14 +35,23 @@ class UitgiftesController extends Controller
 
                     // when logged in as admin
                     [
-                        'actions' => ['create', 'update', 'delete', 'index','view'],
+                        'actions' => ['create', 'update', 'delete', 'index', 'view'],
                         'allow' => true,
                         'roles' => ['@'],
                         'matchCallback' => function ($rule, $action) {
                             return (Yii::$app->user->identity->role == 'uitgifte');
                         }
-                    ],
 
+                    ],
+                    [
+                        'actions' => ['create', 'update', 'delete', 'index', 'view'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            return (Yii::$app->user->identity->role == 'applicatieBeheerder');
+                        }
+                    ],
+                    //hier laat ik zien wie welke rechten heeft.
                 ],
             ],
         ];

@@ -41,7 +41,15 @@ class InnamesController extends Controller
                             return (Yii::$app->user->identity->role == 'inname');
                         }
                     ],
-
+                    [
+                        'actions' => ['create', 'update', 'delete', 'index','view'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            return (Yii::$app->user->identity->role == 'applicatieBeheerder');
+                        }
+                    ],
+                    //hier laat ik zien wie welke rechten heeft.
                 ],
             ],
         ];

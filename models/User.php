@@ -62,6 +62,7 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
             'accessToken' => 'james-token',
             'role' => 'applicatieBeheerder',
         ],
+        //hier staan elke gebruiker zijn username, password en role 
     ];
 
 
